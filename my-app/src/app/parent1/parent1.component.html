@@ -1,0 +1,11 @@
+<p>parent1 works!</p>
+<app-child1 
+    [message]="parentMessage"
+    (messageChange)="handleChildMessage($event)">
+</app-child1>
+
+<!-- [message] - это Input -->
+ <!-- (messageChange) - подписываемся на событие от дочернего компонента (Output)
+        $event - єто данніе, которые передал EventEmitter -->
+
+<p>Сообщение родителя: {{ parentMessage }}</p>

@@ -1,0 +1,82 @@
+<!-- <h1>{{title}}</h1> -->
+
+<!-- <button [disabled]="isDisabled">Кнопка</button>
+
+<img [src]="imageUrl">
+
+<button [disabled]="isLoading || !isValid"></button>
+<img [src]="isDark ? darkImg : lightImg"> -->
+
+
+
+<!-- <button (click)="onClick()">Нажми</button>
+
+<button (click)="deleteUser(5)">Удалить</button> -->
+
+
+
+
+<!-- 
+<input type="text" [(ngModel)]="name">
+<button (click)="name = ''">Очистить</button>
+<p>Ты ввёл: {{name}}</p> -->
+
+
+<!-- <div [class.active]="isActive">Текст</div> -->
+
+
+
+<!-- 
+<div class="box" [ngClass]="{ active: isActive, error: hasError }">
+    Блок
+</div>
+
+<button (click)="toggleActive()">Toggle Active</button>
+<button (click)="toggleError()">Toggle Error</button> -->
+
+
+
+<!-- <div [ngStyle]="{
+    backgroundColor: isDark ? '#222' : '#fff',
+    color: isDark ? '#fff' : '#000',
+    padding: '16px'
+}">
+    Тема
+</div>
+
+<button (click)="isDark = !isDark">Toggle theme</button>
+
+
+<div [style.display]="isVisible ? 'block' : 'none'">
+    Я могу исчезать
+</div>
+<button (click)="isVisible = !isVisible">Показать/скрыть</button>
+
+
+<span [attr.title]="tooltip">Наведи</span> -->
+
+
+
+
+
+<h2>Список задач</h2>
+<input [(ngModel)]="newTaskTitle" placeholder="Введите задачу">
+
+<button [disabled]="!newTaskTitle" (click)="addTask()">Добавить</button>
+
+<p>Всего задач: {{ tasks.length }}</p>
+
+<ul>
+    <li *ngFor="let task of tasks" [ngClass]="{
+            done: task.done,
+            important: task.important
+        }">
+        {{ task.title }}
+
+
+        <button (click)="toggleDone(task.id)">✔</button>
+        <button (click)="toggleImportant(task.id)">!</button>
+        <button (click)="deleteTask(task.id)">✖</button>
+
+    </li>
+</ul>

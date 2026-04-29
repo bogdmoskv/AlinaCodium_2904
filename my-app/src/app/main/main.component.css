@@ -1,0 +1,39 @@
+.box {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #444;
+    background: #f0f0f0;
+}
+
+.active {
+    background: #d4ffd4;
+    border-color: #2ecc71;
+    font-weight: bold;
+}
+
+.error {
+    background: #ffd4d4;
+    border-color: #e74c3c;
+    color: #a00;
+}
+
+li {
+    margin: 8px 0;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.important {
+    font-weight: bold;
+    color: red;
+}
+
+button{
+    margin-right: 8px;
+}

@@ -1,0 +1,12 @@
+<div>
+    <div>
+        <input [(ngModel)]="name">
+        <button (click)="addItem()">Добавить</button>
+    </div>
+
+    <ul>
+        @for (item of items; track $index){
+            <li>{{ item }}</li>
+        }
+    </ul>
+</div>
